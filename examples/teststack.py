@@ -1,24 +1,33 @@
-class Cody:
-    def __init__(self):
-        self.storage = []
-
-
-    def add(self, value):
-        self.storage.append(value)
-
-
-    def len(self, value):
-        self.storage = len(self.storage)
 
 
 
-
-
-
-
-
-x = Cody()
-
-x.add(4)
+x = [i for i in range(10)]
 
 print(x)
+
+
+
+# class Cody:
+#     def __init__(self):
+#         self.storage = []
+#
+#
+#     def add(self, value):
+#         self.storage.append(value)
+#
+#
+#     def len(self, value):
+#         self.storage = len(self.storage)
+#
+#
+#
+#
+#
+#
+#
+#
+# x = Cody()
+#
+# x.add(4)
+#
+# print(x)
