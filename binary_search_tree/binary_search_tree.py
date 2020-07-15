@@ -1,7 +1,7 @@
 """
-Binary search trees are a data structure that enforce an ordering over 
-the data they store. That ordering in turn makes it a lot more efficient 
-at searching for a particular piece of data in the tree. 
+Binary search trees are a data structure that enforce an ordering over
+the data they store. That ordering in turn makes it a lot more efficient
+at searching for a particular piece of data in the tree.
 
 This part of the project comprises two days:
 1. Implement the methods `insert`, `contains`, `get_max`, and `for_each`
@@ -9,6 +9,14 @@ This part of the project comprises two days:
 2. Implement the `in_order_print`, `bft_print`, and `dft_print` methods
    on the BSTNode class.
 """
+
+# class BinarySearchTree:
+#     def __init__(self, root=None):
+#         self.value = value
+#         self.left = None
+#         self.right = None
+
+
 class BSTNode:
     def __init__(self, value):
         self.value = value
@@ -17,10 +25,34 @@ class BSTNode:
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
+        # compare the input value with the value of the Node
+        # if value < Node's value
+        if value < self.value:
+            # we need to move left
+            # if we see that there is no left child, then we can wrap the
+            if self.left is None:
+            # value in a BSTNode and park it.
+                self.left = BSTNode(value)
+            # otherwise there is a child
+            else:
+            # call the left childs insert method
+                self.left.insert(value)
+        # otherwise, value >= Nodes value
+        else:
+            # we need to move right
+            if self.right is None:
+            # if we see there is no right child, then we can wrap the
+            # value in a BSTNode and park it.
+                self.right = BSTNode(value)
+            # otherwise there is a child
+            else:
+            # call the rights childs insert method
+                self.right.insert(value)
+
 
     # Return True if the tree contains the value
     # False if it does not
+    # contains == search, similar to insert method
     def contains(self, target):
         pass
 
@@ -59,3 +91,12 @@ class BSTNode:
     # Print Post-order recursive DFT
     def post_order_dft(self, node):
         pass
+
+
+# root = BSTNode(26)
+
+
+
+
+
+#end
